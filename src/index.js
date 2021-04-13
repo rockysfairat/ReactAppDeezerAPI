@@ -2,11 +2,13 @@ import ReactDom from 'react-dom';
 
 import './index.css';
 import pic01 from './images/musicianDrumAndBass.jpg';
+import pic02 from './images/musicianDeepHouse.jpg';
+import pic03 from './images/musicianChill.jpg';
 
 // Div that contains three pages of the app. Has to be divided later:
 const App = () => {
     return <div>
-        <FirstPage />
+        <HomePage />
         {/* <SecondPage />
         <ThirdPage /> */}
     </div>
@@ -17,9 +19,9 @@ const App = () => {
 // Setting up the first page:
 
 // Put here everything that has to be rendered:
-const FirstPage = () => {
+const HomePage = () => {
     return <div className='PageContainer'>
-        <FirstPageHeader />
+        <HomePageHeader />
         <GenrePicker />
         <Footer />
     </div>
@@ -35,15 +37,17 @@ const drumAndBass = {
 const deepHouse = {
     title: 'Deep House',
     pictogram: 'Ѯ',
+    background: pic02
 }
 
 const chill = {
     title: 'Chill',
-    pictogram: 'ϐ'
+    pictogram: 'ϐ',
+    background: pic03
 }
 
 // Setting up elements of the first page:
-const FirstPageHeader = () => {
+const HomePageHeader = () => {
     return <header>
         <h1>Music to work to</h1>
         <h2>Pick up the genre</h2>
@@ -58,16 +62,17 @@ const GenrePicker = ({}) => {
             background={drumAndBass.background} />
         <Genre 
             title={deepHouse.title}
-            pictogram={deepHouse.pictogram} />
+            pictogram={deepHouse.pictogram}
+            background={deepHouse.background} />
         <Genre 
             title={chill.title}
-            pictogram={chill.pictogram} />
+            pictogram={chill.pictogram}
+            background={chill.background} />
     </div>
 }
 
 const Genre = ({title, pictogram, background}) => {
-    return <div className='genre' style={{backgroundImage: `url(${background}) width=300 height=300`}}>
-        <img src={background} width='300' height='300' />
+    return <div className='genre' style={{backgroundImage: 'url(' + background + ')'}}>
         <p>{pictogram}</p>
         <h3>{title}</h3>
     </div>
