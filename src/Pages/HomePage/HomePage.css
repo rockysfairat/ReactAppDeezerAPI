@@ -1,0 +1,53 @@
+.PageContainer {
+    width: 100%;
+    background-color: #1E1F1C;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
+
+h1 {
+    font-size: 4vw;
+}
+
+h2 {
+    font-size: 2vw;
+    display: flex;
+    justify-content: center;
+}
+
+.genrePicker {
+    display: flex;
+    justify-content: center;
+    border: dotted 3px lightblue;
+}
+
+.genre {
+    border: dashed 3px greenyellow;
+    margin: 0 3vw 0 3vw;
+    width: 15vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.genre p {
+    font-size: 7vw;
+    background-color: rebeccapurple;
+    width: 8.5vw;
+    height: 8.5vw;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.genre h3 {
+    background-color: rebeccapurple;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0;
+    padding: 0.35vw 0 0.35vw 0;
+}
