@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/rockysfairat/ReactAppDeezerAPI/static/css/main.c0725802.chunk.css",
+    "main.js": "/rockysfairat/ReactAppDeezerAPI/static/js/main.d208aa21.chunk.js",
+    "main.js.map": "/rockysfairat/ReactAppDeezerAPI/static/js/main.d208aa21.chunk.js.map",
+    "runtime-main.js": "/rockysfairat/ReactAppDeezerAPI/static/js/runtime-main.f8dd00fe.js",
+    "runtime-main.js.map": "/rockysfairat/ReactAppDeezerAPI/static/js/runtime-main.f8dd00fe.js.map",
+    "static/js/2.4ea97a8c.chunk.js": "/rockysfairat/ReactAppDeezerAPI/static/js/2.4ea97a8c.chunk.js",
+    "static/js/2.4ea97a8c.chunk.js.map": "/rockysfairat/ReactAppDeezerAPI/static/js/2.4ea97a8c.chunk.js.map",
+    "index.html": "/rockysfairat/ReactAppDeezerAPI/index.html",
+    "static/css/main.c0725802.chunk.css.map": "/rockysfairat/ReactAppDeezerAPI/static/css/main.c0725802.chunk.css.map",
+    "static/js/2.4ea97a8c.chunk.js.LICENSE.txt": "/rockysfairat/ReactAppDeezerAPI/static/js/2.4ea97a8c.chunk.js.LICENSE.txt",
+    "static/media/musicianDrumAndBass.866ee732.jpg": "/rockysfairat/ReactAppDeezerAPI/static/media/musicianDrumAndBass.866ee732.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f8dd00fe.js",
+    "static/js/2.4ea97a8c.chunk.js",
+    "static/css/main.c0725802.chunk.css",
+    "static/js/main.d208aa21.chunk.js"
+  ]
+}
