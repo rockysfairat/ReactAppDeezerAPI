@@ -1,4 +1,4 @@
-import './HomePage.css';
+import './homePage.css';
 
 import pic01 from '../../images/musicianDrumAndBass.jpg';
 import pic02 from '../../images/musicianDeepHouse.jpg';
