@@ -1,6 +1,5 @@
-import './footer.css'
+import './footer.css';
 
-
-const Footer = () => {
+export default function Footer() {
     return <footer>Powered by Deezer (put the logo in here)</footer>
 }
