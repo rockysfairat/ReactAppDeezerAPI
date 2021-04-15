@@ -1,0 +1,33 @@
+
+.artistContainer {
+    height: 200px;
+}
+
+.artistPicker {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 4vw;
+    margin-bottom: 2vw;
+}
+
+.artistPhoto {
+    width: 11vw;
+    height: 11vw;
+    border-style: solid;
+    border-color: #007bff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+
+.artistPhoto img {
+    width: 100%;
+}
+
+.artistContainer h3 {
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+}

@@ -3,14 +3,15 @@ import ReactDom from 'react-dom';
 import './index.css';
 
 import HomePage from './Pages/HomePage/HomePage.jsx';
+import ArtistPage from './Pages/ArtistPage/ArtistPage.jsx';
 
 
 // Div that contains three pages of the app. Has to be divided later:
 const App = () => {
     return <div>
-        <HomePage />
-        {/* <SecondPage />
-        <ThirdPage /> */}
+        {/* <HomePage /> */}
+        <ArtistPage />
+        {/* <ThirdPage /> */}
     </div>
 }
 
@@ -20,43 +21,12 @@ const App = () => {
 
 // Put here everything that has to be rendered:
 
-// const SecondPage = () => {
-//     return <div className='PageContainer'>
-//         <h2>Genre: one of three </h2>
-//         <div className='artistPicker'>
-//             <Artist />
-//             <Artist />
-//             <Artist />
-//             <Artist />
-//             <Artist />
-//             <Artist />
-//             <Artist />
-//             <Artist />
-//             <Artist />
-//             <Artist />
-//             <Artist />
-//             <Artist />
-//             <Artist />
-//             <Artist />
-//         </div>
-//         <Footer />
-//     </div>
-// }
-
-// const Artist = () => {
-//     return <div className='artistContainer'>
-//         <div className='artistPhoto'>
-//             <p>Put the photo in here!</p>
-//         </div>
-//         <h3>Test test</h3>
-//     </div>
-// }
 
 
-// // Setting up the third page:
 
+// Setting up the third page:
 
-// // Put here everything that has to be rendered:
+// Put here everything that has to be rendered:
 // const ThirdPage = () => {
 //     return <div>
 //         <AlbumWrapper />
