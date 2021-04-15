@@ -4,7 +4,7 @@ import pic01 from '../../images/musicianDrumAndBass.jpg';
 import pic02 from '../../images/musicianDeepHouse.jpg';
 import pic03 from '../../images/musicianChill.jpg';
 
-import Footer from '../../Components/Footer.jsx';
+import Footer from '../../Components/Footer/Footer.jsx';
 
 export default function HomePage() {
 

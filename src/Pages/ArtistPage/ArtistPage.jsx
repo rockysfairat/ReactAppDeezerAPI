@@ -2,7 +2,7 @@ import './artistpage.css';
 
 import artistPlaceholderImg from '../../images/artistPlaceholder.jpg';
 
-import Footer from '../../Components/Footer.jsx';
+import Footer from '../../Components/Footer/Footer.jsx';
 
 export default function ArtistPage() {
     return <div className='PageContainer'>
