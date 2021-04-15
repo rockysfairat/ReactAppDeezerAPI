@@ -12,46 +12,46 @@ h1 {
 }
 
 h2 {
-    font-size: 2vw;
     display: flex;
+    font-size: 2vw;
     justify-content: center;
 }
 
 .genrePicker {
+    border: dotted 3px lightblue;
     display: flex;
     justify-content: center;
-    border: dotted 3px lightblue;
 }
 
 .genre {
-    border: dashed 3px greenyellow;
-    margin: 0 3vw 0 3vw;
-    width: 15vw;
-    height: 28vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     align-items: center;
     background-size: cover;
+    border: dashed 3px greenyellow;
+    display: flex;
+    flex-direction: column;
+    height: 28vw;
+    justify-content: space-between;
+    margin: 0 3vw 0 3vw;
+    width: 15vw;
 }
 
 .genre p {
-    font-size: 7vw;
     background-color: rebeccapurple;
-    width: 8.5vw;
-    height: 8.5vw;
-    display: flex;
-    justify-content: center;
     border-radius: 50%;
-    margin: 4vw 0 5vw 0;
+    display: flex;
+    font-size: 7vw;
+    height: 8.5vw;
+    justify-content: center;
+    margin-top: 10vw;
+    width: 8.5vw;
 }
 
 .genre h3 {
     background-color: rgb(204, 114, 122);
-    width: 100%;
     display: flex;
+    font-size: 1.8vw;
     justify-content: center;
     margin: 0;
     padding: 0.35vw 0 0.35vw 0;
-    font-size: 1.8vw;
+    width: 100%;
 }
