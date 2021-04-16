@@ -11,15 +11,15 @@
 }
 
 .artistPhoto {
-    width: 11vw;
-    height: 11vw;
-    border-style: solid;
+    align-items: center;
     border-color: #007bff;
     border-radius: 50%;
+    border-style: solid;
     display: flex;
+    height: 11vw;
     justify-content: center;
-    align-items: center;
     overflow: auto;
+    width: 11vw;
 }
 
 .artistPhoto img {

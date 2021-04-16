@@ -1,4 +1,4 @@
-import './homePage.css';
+import './HomePage.css';
 
 import pic01 from '../../images/musicianDrumAndBass.jpg';
 import pic02 from '../../images/musicianDeepHouse.jpg';
@@ -15,23 +15,29 @@ export default function HomePage() {
     </div>
 }
 
-const drumAndBass = {
-    title: 'Drum & Bass',
-    pictogram: 'Ϡ',
-    background: pic01
-}
+const genresArray = [
+    {
+        id: 1,
+        title: 'Drum & Bass',
+        pictogram: 'Ϡ',
+        background: pic01
+    }
+,
+    {
+        id: 2,
+        title: 'Deep House',
+        pictogram: 'Ѯ',
+        background: pic02
+    }
+,
+    {
+        id: 3,
+        title: 'Chill',
+        pictogram: 'ϐ',
+        background: pic03
+    }
 
-const deepHouse = {
-    title: 'Deep House',
-    pictogram: 'Ѯ',
-    background: pic02
-}
-
-const chill = {
-    title: 'Chill',
-    pictogram: 'ϐ',
-    background: pic03
-}
+]
 
 const HomePageHeader = () => {
     return <header>
@@ -41,20 +47,12 @@ const HomePageHeader = () => {
 }
 
 const GenrePicker = () => {
-    return <div className='genrePicker'>
-        <Genre 
-            title={drumAndBass.title}
-            pictogram={drumAndBass.pictogram}
-            background={drumAndBass.background} />
-        <Genre 
-            title={deepHouse.title}
-            pictogram={deepHouse.pictogram}
-            background={deepHouse.background} />
-        <Genre 
-            title={chill.title}
-            pictogram={chill.pictogram}
-            background={chill.background} />
+    return (<div className='genrePicker'>
+        { genresArray.map((genre) => {
+            return <Genre key={genre.id} {...genre}></Genre>
+        })}
     </div>
+    )
 }
 
 const Genre = ({title, pictogram, background}) => {

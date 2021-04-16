@@ -44,11 +44,11 @@ ul li {
 }
 
 .songTitleLiElement {
-    width: 80%;
     margin-left: 0.4vw;
+    width: 80%;
 }
 
 .songDurationLiElement, .songRatingLiElement {
-    width: 6%;
     margin-left: 0.4vw;
+    width: 6%;
 }
