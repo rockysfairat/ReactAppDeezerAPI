@@ -35,9 +35,39 @@ h2 {
     width: 15vw;
 }
 
+
+/* Animation of the P element: */
+
+.animation__GenreP {
+    -webkit-animation: rotate-center 700ms linear infinite ;
+    animation: rotate-center 700ms linear infinite ;
+}
+
+/* animation-duration: 1000ms;
+animation-name: GenreP;
+animation-iteration-count: infinite;
+} */
+
+/* @keyframes GenreP {
+10% {
+    -webkit-animation: rotate-center 700ms linear both;
+    animation: rotate-center 700ms linear both;
+}
+
+50% {
+    -webkit-animation: rotate-center 500ms linear both;
+    animation: rotate-center 500ms linear both;
+}
+
+100% {
+    -webkit-animation: rotate-center 300ms infinite both;
+    animation: rotate-center 300ms infinite both;
+}
+} */
+
 .genre p {
     background-color: rebeccapurple;
-    border-radius: 50%;
+    border-radius: 50% 10% 50% 10%; /* Change back to 50% when the animation starts working */
     display: flex;
     font-size: 7vw;
     height: 8.5vw;

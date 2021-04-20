@@ -6,6 +6,18 @@ import pic03 from '../../images/musicianChill.jpg';
 
 import Footer from '../../Components/Footer/Footer.jsx';
 
+
+// import styled, { keyframes } from 'styled-components';
+// import { bounce } from 'react-animations';
+
+// const bounceAnimation = keyframes`${bounce}`;
+
+// const BouncyDiv = styled.div`
+//   animation: 5s ${bounceAnimation};
+// `;
+
+
+
 export default function HomePage() {
 
     return <div className='PageContainer'>
@@ -57,7 +69,7 @@ const GenrePicker = () => {
 
 const Genre = ({title, pictogram, background}) => {
     return <div className='genre' style={{backgroundImage: 'url(' + background + ')'}}>
-        <p>{pictogram}</p>
+        <p className='animation__GenreP'>{pictogram}</p>
         <h3>{title}</h3>
     </div>
 }

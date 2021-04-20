@@ -27,16 +27,17 @@ export default function ArtistPage() {
     </div>
 }
 
-const artistImg = {
+const artistNameAndImg = {
+    name: 'Test name',
     placeholder: artistPlaceholderImg
 }
 
 const Artist = (props) => {
-    const { placeholder } = artistImg;
+    const { name, placeholder } = artistNameAndImg;
     return <div className='artistContainer'>
         <div className='artistPhoto'>
-            <img src={artistImg.placeholder} />
+            <img src={artistNameAndImg.placeholder} />
         </div>
-        <h3>Test name</h3>
+        <h3>{artistNameAndImg.name}</h3>
     </div>
 }
