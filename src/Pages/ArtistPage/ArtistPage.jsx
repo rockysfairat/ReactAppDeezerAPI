@@ -1,14 +1,19 @@
 import './artistpage.css';
-import axios from 'axios';
+// import axios from 'axios';
 import { useState } from 'react';
 import { useEffect } from 'react';
 
-import artistPlaceholderImg from '../../images/artistPlaceholder.jpg';
+// import artistPlaceholderImg from '../../images/artistPlaceholder.jpg';
 
 import Footer from '../../Components/Footer/Footer.jsx';
 import React from 'react';
 
+
+
+
 export default function ArtistPage() {
+
+    
     return <div className='PageContainer'>
         <h2>Genre: one of three </h2>
         <div className='artistPicker'>
@@ -18,38 +23,40 @@ export default function ArtistPage() {
     </div>
 }
 
-
+const url = 'https://api.deezer.com/search?q=drumandbass&index=30';
 
 const Artist = () => {
+
     const [artistList, setArtistList] = useState([]);
 
-    useEffect( () => {
-        async function fetchArtistData() {
-            try {
-                const apiCallResponse = await axios.get('https://api.deezer.com/search?q=drumandbass');
-                setArtistList(apiCallResponse.data);
-            } catch (error) {
-                console.log('This is the error!');
-            }
-        }
-        fetchArtistData();
-    }, [])
+        const getArtists = async () => {
 
-    if (artistList === 0) {
-        return 'Sorrrrrrryyyyyyy!!!!';
-    }
+            const response = await fetch(url);
+            const artists = await response.json();
+
+            if (artists === 0) {
+                return 'The JSON file is empty!';
+            }
+            setArtistList(artists);
+        };
+
+    useEffect( () => {
+        getArtists();
+    }, []);
 
     return (
         <div className='artistContainer'>
             {artistList.map( (artistItem) => {
-                return ( <React.Fragment>
-                    
+                const {name, picture_medium} = artistItem;
+                return (<React.Fragment>
                     <div className='artistPhoto'>
-                        <img src={artistItem.artist.picture_medium} />
+                         <img src={picture_medium} alt={name}/>
                     </div>
-                    <h3>{artistItem.title}</h3>
-                </React.Fragment> )
-            } ) }
+                    <h3>{name}</h3>
+                </React.Fragment>
+                )
+            })}
+            <h3>Test</h3>
         </div>
     )
 }
