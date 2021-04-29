@@ -44,15 +44,17 @@ const Artist = () => {
         getArtists();
     }, []);
 
+    console.log(JSON.stringify(artistList));
+
     return (
         <div className='artistContainer'>
             {artistList.map( (artistItem) => {
                 const {name, picture_medium} = artistItem;
                 return (<React.Fragment>
                     <div className='artistPhoto'>
-                         <img src={picture_medium} alt={name}/>
+                         <img src={artistItem.picture_medium} alt={artistItem.name}/>
                     </div>
-                    <h3>{name}</h3>
+                    <h3>{artistItem.name}</h3>
                 </React.Fragment>
                 )
             })}
