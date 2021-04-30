@@ -1,4 +1,5 @@
 import './artistpage.css';
+import { motion } from 'framer-motion';
 
 import artistPlaceholderImg from '../../images/artistPlaceholder.jpg';
 
@@ -8,12 +9,6 @@ export default function ArtistPage() {
     return <div className='PageContainer'>
         <h2>Genre: one of three </h2>
         <div className='artistPicker'>
-            <Artist />
-            <Artist />
-            <Artist />
-            <Artist />
-            <Artist />
-            <Artist />
             <Artist />
             <Artist />
             <Artist />
@@ -35,9 +30,9 @@ const artistNameAndImg = {
 const Artist = (props) => {
     const { name, placeholder } = artistNameAndImg;
     return <div className='artistContainer'>
-        <div className='artistPhoto'>
+        <motion.div className='artistPhoto'  whileHover={{width: '13vw', height: '13vw'}}>
             <img src={artistNameAndImg.placeholder} />
-        </div>
+        </motion.div>
         <h3>{artistNameAndImg.name}</h3>
     </div>
 }

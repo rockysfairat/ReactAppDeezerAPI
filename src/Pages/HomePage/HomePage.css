@@ -35,44 +35,17 @@ h2 {
     width: 15vw;
 }
 
-
-/* Animation of the P element: */
-
-.animation__GenreP {
-    -webkit-animation: rotate-center 700ms linear infinite ;
-    animation: rotate-center 700ms linear infinite ;
-}
-
-/* animation-duration: 1000ms;
-animation-name: GenreP;
-animation-iteration-count: infinite;
-} */
-
-/* @keyframes GenreP {
-10% {
-    -webkit-animation: rotate-center 700ms linear both;
-    animation: rotate-center 700ms linear both;
-}
-
-50% {
-    -webkit-animation: rotate-center 500ms linear both;
-    animation: rotate-center 500ms linear both;
-}
-
-100% {
-    -webkit-animation: rotate-center 300ms infinite both;
-    animation: rotate-center 300ms infinite both;
-}
-} */
-
-.genre p {
+.genre a {
+    align-items: center;
     background-color: rebeccapurple;
-    border-radius: 50% 10% 50% 10%; /* Change back to 50% when the animation starts working */
+    border-radius: 50% 50% 50% 50%; /* Change back to 50% when the animation starts working */
+    color: #fff;
     display: flex;
     font-size: 7vw;
     height: 8.5vw;
     justify-content: center;
     margin-top: 10vw;
+    text-decoration: none;
     width: 8.5vw;
 }
 

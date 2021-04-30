@@ -1,20 +1,13 @@
 import './HomePage.css';
 
+import { motion } from 'framer-motion';
+
 import pic01 from '../../images/musicianDrumAndBass.jpg';
 import pic02 from '../../images/musicianDeepHouse.jpg';
 import pic03 from '../../images/musicianChill.jpg';
 
-import Footer from '../../Components/Footer/Footer.jsx';
+import Footer from '../../Components/Footer/Footer';
 
-
-// import styled, { keyframes } from 'styled-components';
-// import { bounce } from 'react-animations';
-
-// const bounceAnimation = keyframes`${bounce}`;
-
-// const BouncyDiv = styled.div`
-//   animation: 5s ${bounceAnimation};
-// `;
 
 
 
@@ -69,7 +62,8 @@ const GenrePicker = () => {
 
 const Genre = ({title, pictogram, background}) => {
     return <div className='genre' style={{backgroundImage: 'url(' + background + ')'}}>
-        <p className='animation__GenreP'>{pictogram}</p>
+        <motion.a href='#' whileHover={{width: '12vw', height: '12vw'}} transition={{duration: 1, type: 'tween'}}>
+            {pictogram}</motion.a>
         <h3>{title}</h3>
     </div>
 }
