@@ -5,6 +5,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 3vw 0 3vw 0;
 } 
 
 h1 {
@@ -18,7 +19,6 @@ h2 {
 }
 
 .genrePicker {
-    border: dotted 3px lightblue;
     display: flex;
     justify-content: center;
 }
@@ -26,13 +26,11 @@ h2 {
 .genre {
     align-items: center;
     background-size: cover;
-    border: dashed 3px greenyellow;
     display: flex;
     flex-direction: column;
     height: 28vw;
     justify-content: space-between;
-    margin: 0 3vw 0 3vw;
-    width: 15vw;
+    width: 25vw;
 }
 
 .genre a {

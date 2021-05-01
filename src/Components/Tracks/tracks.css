@@ -1,0 +1,30 @@
+ul {
+    display: flex;
+    width: 100%;
+    /* border: green 2px dashed; */
+    margin: 0.2vw 0 0.2vw 0;
+    list-style-type: none;
+}
+
+li {
+    font-size: 20px;
+    border-bottom: 1px gray dashed;
+}
+
+.trackTitle {
+    width: 70%;
+}
+
+.trackDuration {
+    display: flex;
+    justify-content: center;
+    width: 10%;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 2vw;
+}
+
+/* play by Тимур Минвалеев from the Noun Project */

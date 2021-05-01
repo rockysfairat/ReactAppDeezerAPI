@@ -1,56 +1,59 @@
+import { useEffect, useState } from 'react';
+
 import './discographypage.css';
 
-import Footer from '../../Components/Footer/Footer.jsx';
+
+import Album from '../../Components/Album/Album';
+import Footer from '../../Components/Footer/Footer';
 
 export default function DiscographyPage() {
-    return <div>
-        <AlbumWrapper />
-        <AlbumWrapper />
+    return <div class='PageContainer'>
         <AlbumWrapper />
         <Footer />
     </div>
     
 }
 
+const url = 'https://api.deezer.com/artist/6/top?limit=20';
+
 const AlbumWrapper = () => {
-    return <article>
-        <AlbumCover />
-        <AlbumSongList />
-    </article>
-}
+    
+    const [albumList, setAlbumList] = useState([]);
 
-const AlbumCover = () => {
-    return <figure>
-        <p>Put the album cover in here!</p>
-    </figure>
-}
+    const getAlbums = async () => {
 
-const AlbumSongList = () => {
-    return <section>
-        <h4>Album title / year</h4>
-        <ul>
-            <li class='songNumLiElement'>01</li>
-            <li class='songTitleLiElement'>Bad Romance</li>
-            <li class='songDurationLiElement'>6:33</li>
-            <li class='songRatingLiElement'>4.6</li>
-        </ul>
-        <ul>
-            <li class='songNumLiElement'>01</li>
-            <li class='songTitleLiElement'>Bad Romance</li>
-            <li class='songDurationLiElement'>6:33</li>
-            <li class='songRatingLiElement'>4.6</li>
-        </ul>
-        <ul>
-            <li class='songNumLiElement'>01</li>
-            <li class='songTitleLiElement'>Bad Romance</li>
-            <li class='songDurationLiElement'>6:33</li>
-            <li class='songRatingLiElement'>4.6</li>
-        </ul>
-        <ul>
-            <li class='songNumLiElement'>01</li>
-            <li class='songTitleLiElement'>Bad Romance</li>
-            <li class='songDurationLiElement'>6:33</li>
-            <li class='songRatingLiElement'>4.6</li>
-        </ul>
-    </section>
+        const response = await fetch(url);
+        const albums = await response.json();
+
+        if (albums === 0) {
+            return 'The JSON file is empty!';
+        }
+        // setTimeout( () => {
+        //     setAlbumList(albums.data)}, 3000);
+
+        setAlbumList(albums.data);
+
+    }
+
+    useEffect(() => {
+        getAlbums();
+    }, []);
+
+    if (albumList.length === 0) {
+        return <>
+            <h1 style={{color: 'red'}}>Loading...........................</h1>
+        </>
+    }
+
+    console.log(albumList); // must return the obj, delete this line later!
+
+    return <div className='albumGrid'>
+        {albumList.map( (item) => {
+            const {cover_medium, title} = item.album;
+            return ( <Album 
+                imgSrc={cover_medium}
+                albumTitle={title} />
+            )
+        })}
+    </div>
 }

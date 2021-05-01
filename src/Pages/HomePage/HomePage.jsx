@@ -62,7 +62,7 @@ const GenrePicker = () => {
 
 const Genre = ({title, pictogram, background}) => {
     return <div className='genre' style={{backgroundImage: 'url(' + background + ')'}}>
-        <motion.a href='#' whileHover={{width: '12vw', height: '12vw'}} transition={{duration: 1, type: 'tween'}}>
+        <motion.a href='#' whileHover={{width: '12vw', height: '12vw', rotate: 360}} transition={{duration: 1, type: 'tween'}}>
             {pictogram}</motion.a>
         <h3>{title}</h3>
     </div>
