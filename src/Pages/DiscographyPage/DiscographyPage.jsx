@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import './discographypage.css';
 
@@ -50,9 +51,11 @@ const AlbumWrapper = () => {
     return <div className='albumGrid'>
         {albumList.map( (item) => {
             const {cover_medium, title} = item.album;
-            return ( <Album 
+            return ( <Link to='/tracks'>
+                <Album 
                 imgSrc={cover_medium}
                 albumTitle={title} />
+            </Link>
             )
         })}
     </div>

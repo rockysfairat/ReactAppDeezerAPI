@@ -1,4 +1,8 @@
+body {
+    margin: -3vw 0 -3vw 0;
+}
+
 #root {
     background-color: #1E1F1C;
-    box-sizing: border-box
+    margin-top: 0;
 }

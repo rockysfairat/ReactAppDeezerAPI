@@ -1,5 +1,6 @@
 .PageContainer {
     width: 100%;
+    height: 100%;
     background-color: #1E1F1C;
     color: #fff;
     display: flex;
@@ -45,6 +46,11 @@ h2 {
     margin-top: 10vw;
     text-decoration: none;
     width: 8.5vw;
+}
+
+.genre a a {
+    margin-left: 0;
+    margin-top: 0;
 }
 
 .genre h3 {

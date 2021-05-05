@@ -6,6 +6,7 @@ import './artistpage.css';
 import Artist from '../../Components/Artist/Artist'
 
 import Footer from '../../Components/Footer/Footer';
+import { useParams } from 'react-router';
 
 export default function ArtistPage() {
     return <div className='PageContainer'>
@@ -22,9 +23,9 @@ export default function ArtistPage() {
 //     placeholder: artistPlaceholderImg
 // }
 
-const url = 'https://api.deezer.com/search?q=chill&index=30';
-
 const ArtistGrid = () => {
+
+    const url = `https://api.deezer.com/search?q=chill&index=30`;
 
     const [artistList, setArtistList] = useState([]);
 
