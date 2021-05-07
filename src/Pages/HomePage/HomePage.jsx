@@ -1,7 +1,7 @@
 import './HomePage.css';
 
 import { motion } from 'framer-motion';
-import { Link, generatePath } from 'react-router-dom'; 
+import { Link } from 'react-router-dom'; 
 
 import pic01 from '../../images/musicianDrumAndBass.jpg';
 import pic02 from '../../images/musicianDeepHouse.jpg';
@@ -26,21 +26,24 @@ const genresArray = [
         id: 1,
         title: 'Drum & Bass',
         pictogram: 'Ϡ',
-        background: pic01
+        background: pic01,
+        slug: 'drum&bass'
     }
 ,
     {
         id: 2,
         title: 'Deep House',
         pictogram: 'Ѯ',
-        background: pic02
+        background: pic02,
+        slug: 'deephouse'
     }
 ,
     {
         id: 3,
         title: 'Chill',
         pictogram: 'ϐ',
-        background: pic03
+        background: pic03,
+        slug: 'chill'
     }
 
 ]
@@ -61,10 +64,10 @@ const GenrePicker = () => {
     )
 }
 
-const Genre = ({title, pictogram, background}) => {
+const Genre = ({title, pictogram, background, slug}) => {
     return <div className='genre' style={{backgroundImage: 'url(' + background + ')'}}>
         <motion.a  href='#' whileHover={{width: '12vw', height: '12vw', rotate: 360}} transition={{duration: 1, type: 'tween'}}>
-        <Link to='/artists'>{pictogram}</Link>
+        <Link to={slug + '/artists/'}  >{pictogram}</Link>
         </motion.a>
         <h3>{title}</h3>
     </div>

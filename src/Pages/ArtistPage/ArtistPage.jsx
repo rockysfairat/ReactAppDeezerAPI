@@ -1,35 +1,30 @@
 import { useEffect, useState } from 'react';
+import { useParams } from 'react-router';
 
 import './artistpage.css';
 
 // import artistPlaceholderImg from '../../images/artistPlaceholder.jpg';
 import Artist from '../../Components/Artist/Artist'
-
 import Footer from '../../Components/Footer/Footer';
-import { useParams } from 'react-router';
 
 export default function ArtistPage() {
+    const {genre} = useParams();
     return <div className='PageContainer'>
-        <h2>Genre: one of three </h2>
+        <h2>Genre: {genre} </h2>
         <div>
-            <ArtistGrid />
+            <ArtistGrid genre={genre}/>
         </div>
         <Footer />
     </div>
 }
 
-// const artistNameAndImg = {
-//     name: 'Test name',
-//     placeholder: artistPlaceholderImg
-// }
+const ArtistGrid = ({genre}) => {
 
-const ArtistGrid = () => {
-
-    const url = `https://api.deezer.com/search?q=chill&index=30`;
+    const baseUrl = `https://api.deezer.com/search?q=${genre}`;
 
     const [artistList, setArtistList] = useState([]);
 
-    const getArtists = async () => {
+    const getArtists = async (url) => {
 
         const response = await fetch(url);
         const artists = await response.json();
@@ -40,11 +35,12 @@ const ArtistGrid = () => {
         // setTimeout( () => {
         //     setArtistList(artists.data)}, 3000);
             
-        setArtistList(artists.data);
+        setArtistList(artists);
     }
 
     useEffect( () => {
-        getArtists();
+        getArtists(baseUrl);
+        return () => {}
     }, []);
 
     console.log(artistList); // returns the obj
@@ -55,14 +51,33 @@ const ArtistGrid = () => {
         </>
     }
 
-    return <div className='artistPicker'>
-        {artistList.map( (item) => {
-                const {id, name, picture_medium} = item.artist;
+    return <div>
+        <div className='artistPicker'>
+        {artistList.data.map( (item) => {
+                let {id, name, picture_medium} = item.artist;
                 return ( <Artist
                     key={id}
                     imgSrc={picture_medium}
                     name={name} />
                 )
             })}
+
+        
     </div>
+
+    <div class='prevAndNext_buttons'>
+    {!!artistList.prev && 
+            <button onClick={ () => getArtists(artistList.prev)}>
+                PREV
+            </button>
+        }
+
+        {!!artistList.next &&
+            <button onClick={ () => getArtists(artistList.next)}>
+                NEXT
+            </button>
+        }
+    </div>
+    </div>
+    
 }

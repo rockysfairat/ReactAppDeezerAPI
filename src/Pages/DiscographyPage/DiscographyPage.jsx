@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useParams } from 'react-router';
 
 import './discographypage.css';
 
@@ -8,16 +9,18 @@ import Album from '../../Components/Album/Album';
 import Footer from '../../Components/Footer/Footer';
 
 export default function DiscographyPage() {
+    let {id} = useParams();
     return <div class='PageContainer'>
-        <AlbumWrapper />
+        <h2>{id}</h2>
+        <AlbumWrapper name={id}/>
         <Footer />
     </div>
     
 }
 
-const url = 'https://api.deezer.com/artist/6/top?limit=20';
-
 const AlbumWrapper = () => {
+
+    const url = `https://api.deezer.com/artist/6/top?limit=20`;
     
     const [albumList, setAlbumList] = useState([]);
 
@@ -38,6 +41,7 @@ const AlbumWrapper = () => {
 
     useEffect(() => {
         getAlbums();
+        return () => {}
     }, []);
 
     if (albumList.length === 0) {

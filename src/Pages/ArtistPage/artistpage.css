@@ -4,3 +4,21 @@
     grid-gap: 1.5vw;
     margin-bottom: 2vw;
 }
+
+.prevAndNext_buttons {
+    margin-top: 6vw;
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    width: 5vw;
+    height: 5vw;
+    margin: 0 0.5vw 0 0.5vw;
+    color: #007bff;
+    background-color: #1E1F1C;
+    font-weight: bold;
+    border: #1E1F1C 2px solid;
+    border-radius: 50%;
+    box-shadow: #007bff 4px 4px 20px;
+}
