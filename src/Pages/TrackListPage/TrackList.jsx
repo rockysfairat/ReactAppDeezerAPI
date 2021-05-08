@@ -5,6 +5,7 @@ import './tracklist.css';
 
 import Tracks from '../../Components/Tracks/Tracks';
 import Footer from '../../Components/Footer/Footer';
+import Loader from '../../Components/Loader/Loader';
 
 export default function TrackListPage() {
     return <div class='PageContainer'>
@@ -27,7 +28,10 @@ const TrackListGrid = () => {
             return 'The JSON file is empty!'
         }
 
-        setTrackList(tracks);
+        setTimeout( () => {
+            setTrackList(tracks)}, 3000);
+
+        // setTrackList(tracks);
     }
 
     useEffect( () => {
@@ -37,7 +41,7 @@ const TrackListGrid = () => {
 
     if (trackList.length === 0) {
         return <>
-            <h1 style={{color: 'red'}}>Loading...........................</h1>
+            <Loader />
         </>
     }
 

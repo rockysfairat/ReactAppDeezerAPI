@@ -17,7 +17,7 @@ const App = () => {
             <Route path='/:genre/artists/'>
                 <ArtistPage />    
             </Route>
-            <Route path=':name/albums'>
+            <Route path='/:id/albums/'>
                 <DiscographyPage />
             </Route>
             <Route path='/tracks'>

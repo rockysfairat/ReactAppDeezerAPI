@@ -9,6 +9,8 @@ ul {
 li {
     font-size: 20px;
     border-bottom: 1px gray dashed;
+    display: flex;
+    align-items: end;
 }
 
 .trackTitle {
@@ -22,9 +24,11 @@ li {
 }
 
 a {
-    color: #fff;
-    text-decoration: none;
-    margin-left: 2vw;
+    margin-left: 0.8vw;
+}
+
+.tracks_svg {
+    width: 9%;
 }
 
 /* play by Тимур Минвалеев from the Noun Project */

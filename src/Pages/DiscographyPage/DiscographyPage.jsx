@@ -6,13 +6,14 @@ import './discographypage.css';
 
 
 import Album from '../../Components/Album/Album';
+import Loader from '../../Components/Loader/Loader';
 import Footer from '../../Components/Footer/Footer';
 
 export default function DiscographyPage() {
-    let {id} = useParams();
+    const {id} = useParams();
     return <div class='PageContainer'>
         <h2>{id}</h2>
-        <AlbumWrapper name={id}/>
+        <AlbumWrapper id={id}/>
         <Footer />
     </div>
     
@@ -32,8 +33,8 @@ const AlbumWrapper = () => {
         if (albums === 0) {
             return 'The JSON file is empty!';
         }
-        // setTimeout( () => {
-        //     setAlbumList(albums.data)}, 3000);
+        setTimeout( () => {
+            setAlbumList(albums.data)}, 3000);
 
         setAlbumList(albums.data);
 
@@ -46,7 +47,7 @@ const AlbumWrapper = () => {
 
     if (albumList.length === 0) {
         return <>
-            <h1 style={{color: 'red'}}>Loading...........................</h1>
+            <Loader />
         </>
     }
 
@@ -54,9 +55,11 @@ const AlbumWrapper = () => {
 
     return <div className='albumGrid'>
         {albumList.map( (item) => {
-            const {cover_medium, title} = item.album;
+            const {id, cover_medium, title} = item.album;
             return ( <Link to='/tracks'>
                 <Album 
+                id={id}
+                key={id}
                 imgSrc={cover_medium}
                 albumTitle={title} />
             </Link>

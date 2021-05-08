@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 1.5vw;
-    margin-bottom: 2vw;
+    margin: 4vw 0 2vw 0;
 }
 
 .prevAndNext_buttons {
@@ -14,11 +14,24 @@
 button {
     width: 5vw;
     height: 5vw;
-    margin: 0 0.5vw 0 0.5vw;
+    margin: 2vw;
     color: #007bff;
     background-color: #1E1F1C;
     font-weight: bold;
     border: #1E1F1C 2px solid;
     border-radius: 50%;
     box-shadow: #007bff 4px 4px 20px;
+}
+
+svg {
+    width: 30%;
+}
+
+.artistPage_title {
+    position: sticky;
+    top: 0;
+    background-color: #1E1F1C;
+    width: 90%;
+    padding: 0.5vw 0 0.5vw 0;
+    margin-top: 0;
 }

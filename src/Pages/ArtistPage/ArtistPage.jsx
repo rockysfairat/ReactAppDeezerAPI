@@ -6,11 +6,12 @@ import './artistpage.css';
 // import artistPlaceholderImg from '../../images/artistPlaceholder.jpg';
 import Artist from '../../Components/Artist/Artist'
 import Footer from '../../Components/Footer/Footer';
+import Loader from '../../Components/Loader/Loader';
 
 export default function ArtistPage() {
     const {genre} = useParams();
     return <div className='PageContainer'>
-        <h2>Genre: {genre} </h2>
+        <h2 className='artistPage_title'>Genre: {genre} </h2>
         <div>
             <ArtistGrid genre={genre}/>
         </div>
@@ -32,10 +33,10 @@ const ArtistGrid = ({genre}) => {
         if (artists === 0) {
             return 'The JSON file is empty!';
         }
-        // setTimeout( () => {
-        //     setArtistList(artists.data)}, 3000);
+        setTimeout( () => {
+            setArtistList(artists)}, 3000);
             
-        setArtistList(artists);
+        // setArtistList(artists);
     }
 
     useEffect( () => {
@@ -47,7 +48,7 @@ const ArtistGrid = ({genre}) => {
 
     if (artistList.length === 0) {
         return <>
-        <h1 style={{color: 'red'}}>Loading...........................</h1>
+        <Loader />
         </>
     }
 
@@ -56,6 +57,7 @@ const ArtistGrid = ({genre}) => {
         {artistList.data.map( (item) => {
                 let {id, name, picture_medium} = item.artist;
                 return ( <Artist
+                    id={id}
                     key={id}
                     imgSrc={picture_medium}
                     name={name} />

@@ -5,7 +5,14 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    /*border: 2px dashed aqua;*/
-    background-color: cadetblue;
-    margin: 1vw;
+    background-color: #1E1F1C;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    position: sticky;
+    bottom: 0;
+}
+
+.deezer_logo {
+    border-radius: 0;
+    width: 60px;
 }
