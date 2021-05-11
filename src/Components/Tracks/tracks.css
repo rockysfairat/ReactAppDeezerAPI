@@ -4,6 +4,7 @@ ul {
     /* border: green 2px dashed; */
     margin: 0.2vw 0 0.2vw 0;
     list-style-type: none;
+    padding-left: 1vw;
 }
 
 li {
@@ -14,7 +15,7 @@ li {
 }
 
 .trackTitle {
-    width: 70%;
+    width: 80%;
 }
 
 .trackDuration {
@@ -23,12 +24,16 @@ li {
     width: 10%;
 }
 
+.trackPreview {
+    width: 6%;
+}
+
 a {
     margin-left: 0.8vw;
 }
 
 .tracks_svg {
-    width: 9%;
+    width: 20px;
 }
 
 /* play by Тимур Минвалеев from the Noun Project */

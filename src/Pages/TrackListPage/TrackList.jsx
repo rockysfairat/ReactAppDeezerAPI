@@ -51,7 +51,7 @@ const TrackListGrid = () => {
         <h2>{trackList.title} <span>by {trackList.artist.name}</span> </h2>
         <h5>Label: {trackList.label} / Released: {trackList.release_date}</h5>
         <div className='trackListAndAlbumPhoto_wrapper'>
-        <img src={trackList.cover_medium} alt={trackList.title} />
+        <img src={trackList.cover_big} alt={trackList.title} />
         <div className='trackListGrid'>
             {trackList.tracks.data.map( (item) => {
                 const {title, duration, explicit, preview} = item;

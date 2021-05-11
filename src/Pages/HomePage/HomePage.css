@@ -36,9 +36,8 @@ h2 {
 
 .genre a {
     align-items: center;
-    background-color: #fff;
-    border-radius: 50% 50% 50% 50%; /* Change back to 50% when the animation starts working */
-    color: #fff;
+    background-color: #644C3F;
+    border-radius: 50% 50% 50% 50%;
     display: flex;
     font-size: 7vw;
     height: 8.5vw;
@@ -51,6 +50,7 @@ h2 {
 .genre a a {
     margin-left: 0;
     margin-top: 0;
+    border: #cc727a solid 3px;
 }
 
 .genre h3 {

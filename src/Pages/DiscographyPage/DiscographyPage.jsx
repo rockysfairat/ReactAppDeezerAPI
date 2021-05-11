@@ -11,6 +11,7 @@ import Footer from '../../Components/Footer/Footer';
 
 export default function DiscographyPage() {
     const {id} = useParams();
+    console.log(id);
     return <div class='PageContainer'>
         <h2>{id}</h2>
         <AlbumWrapper id={id}/>
@@ -19,10 +20,10 @@ export default function DiscographyPage() {
     
 }
 
-const AlbumWrapper = () => {
+const AlbumWrapper = (id) => {
 
-    const url = `https://api.deezer.com/artist/6/top?limit=20`;
-    
+    const url = `https://api.deezer.com/artist/${id}/top?limit=20`;
+    console.log(url);
     const [albumList, setAlbumList] = useState([]);
 
     const getAlbums = async () => {
@@ -33,8 +34,8 @@ const AlbumWrapper = () => {
         if (albums === 0) {
             return 'The JSON file is empty!';
         }
-        setTimeout( () => {
-            setAlbumList(albums.data)}, 3000);
+        // setTimeout( () => {
+        //     setAlbumList(albums.data)}, 3000);
 
         setAlbumList(albums.data);
 
