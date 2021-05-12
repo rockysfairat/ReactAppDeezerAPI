@@ -14,14 +14,14 @@ const App = () => {
             <Route exact path='/'>
                 <HomePage />
             </Route>
-            <Route path='/:genre/artists/'>
-                <ArtistPage />    
+            <Route path='/albums/:albumId/'>
+                <TrackListPage />
             </Route>
-            <Route path='/:genre/artists/:id/albums/'>
+            <Route path='/artists/:id/'>
                 <DiscographyPage />
             </Route>
-            <Route path='/tracks'>
-                <TrackListPage />
+            <Route path='/:genre/artists/'>
+                <ArtistPage />    
             </Route>
         </Switch>
     </Router>

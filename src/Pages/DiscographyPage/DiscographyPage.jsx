@@ -13,22 +13,22 @@ export default function DiscographyPage() {
     const {id} = useParams();
     console.log(id);
     return <div class='PageContainer'>
-        <h2>{id}</h2>
         <AlbumWrapper id={id}/>
         <Footer />
     </div>
     
 }
 
-const AlbumWrapper = (id) => {
+const AlbumWrapper = ({id}) => {
 
     const url = `https://api.deezer.com/artist/${id}/top?limit=20`;
-    console.log(url);
+
     const [albumList, setAlbumList] = useState([]);
 
     const getAlbums = async () => {
 
         const response = await fetch(url);
+        
         const albums = await response.json();
 
         if (albums === 0) {
@@ -38,7 +38,6 @@ const AlbumWrapper = (id) => {
         //     setAlbumList(albums.data)}, 3000);
 
         setAlbumList(albums.data);
-
     }
 
     useEffect(() => {
@@ -54,10 +53,11 @@ const AlbumWrapper = (id) => {
 
     console.log(albumList); // must return the obj, delete this line later!
 
-    return <div className='albumGrid'>
+    return <><h2>{albumList[0]?.artist.name}</h2>
+     <div className='albumGrid'>
         {albumList.map( (item) => {
             const {id, cover_medium, title} = item.album;
-            return ( <Link to='/tracks'>
+            return ( <Link to={'/albums/' + id}>
                 <Album 
                 id={id}
                 key={id}
@@ -67,4 +67,5 @@ const AlbumWrapper = (id) => {
             )
         })}
     </div>
+    </>
 }

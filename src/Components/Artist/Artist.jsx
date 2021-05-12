@@ -13,7 +13,7 @@ export default function Artist ({
   return (
     <div className='artistContainer'>
       <motion.div className='artistPhoto' key={id} whileHover={{width: '13vw', height: '13vw'}}>
-        <Link to={id + '/albums'}>
+        <Link to={'/artists/' + id}>
           <img src={imgSrc} alt={name}/>
         </Link>
       </motion.div>

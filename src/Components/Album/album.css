@@ -14,9 +14,15 @@ h4 {
     justify-content: center;
     margin: 0;
     width: 100%;
+    color: #fff;
+    text-decoration: none;
 }
 
 img {
     width: 17vw;
     border-radius: 10%;
+}
+
+a {
+    text-decoration: none;
 }

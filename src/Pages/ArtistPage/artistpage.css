@@ -35,3 +35,16 @@ svg {
     padding: 0.5vw 0 0.5vw 0;
     margin-top: 0;
 }
+
+h2 {
+    position: fixed;
+    top: 0;
+    width: 90%;
+    background-color: #1E1F1C;
+    padding: 1vw 0 1vw 0;
+    margin-top: 0;
+}
+
+.albumGrid {
+    margin-top: 3vw;
+}

@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useParams } from 'react-router';
 
 import './tracklist.css';
 
@@ -8,15 +9,16 @@ import Footer from '../../Components/Footer/Footer';
 import Loader from '../../Components/Loader/Loader';
 
 export default function TrackListPage() {
+    const {albumId} = useParams();
     return <div class='PageContainer'>
-        <TrackListGrid />
+        <TrackListGrid id={albumId} />
         <Footer />
     </div>
 }
 
-const url = 'https://api.deezer.com/album/7036582';
+const TrackListGrid = ({id}) => {
 
-const TrackListGrid = () => {
+    const url = `https://api.deezer.com/album/${id}`;
 
     const [trackList, setTrackList] = useState([]);
 
