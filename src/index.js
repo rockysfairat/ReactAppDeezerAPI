@@ -11,7 +11,7 @@ import TrackListPage from './Pages/TrackListPage/TrackList';
 const App = () => {
     return <Router>
         <Switch>
-            <Route exact path='/'>
+            <Route exact path='/ReactAppDeezerAPI'>
                 <HomePage />
             </Route>
             <Route path='/albums/:albumId/'>
