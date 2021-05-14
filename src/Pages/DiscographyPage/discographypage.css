@@ -1,9 +1,0 @@
-.albumGrid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: 1vw;
-}
-
-.albumGrid a {
-    margin-left: 0;
-}
