@@ -1,21 +1,26 @@
 {
   "files": {
-    "main.css": "/rockysfairat/ReactAppDeezerAPI/static/css/main.c0725802.chunk.css",
-    "main.js": "/rockysfairat/ReactAppDeezerAPI/static/js/main.d208aa21.chunk.js",
-    "main.js.map": "/rockysfairat/ReactAppDeezerAPI/static/js/main.d208aa21.chunk.js.map",
-    "runtime-main.js": "/rockysfairat/ReactAppDeezerAPI/static/js/runtime-main.f8dd00fe.js",
-    "runtime-main.js.map": "/rockysfairat/ReactAppDeezerAPI/static/js/runtime-main.f8dd00fe.js.map",
-    "static/js/2.4ea97a8c.chunk.js": "/rockysfairat/ReactAppDeezerAPI/static/js/2.4ea97a8c.chunk.js",
-    "static/js/2.4ea97a8c.chunk.js.map": "/rockysfairat/ReactAppDeezerAPI/static/js/2.4ea97a8c.chunk.js.map",
-    "index.html": "/rockysfairat/ReactAppDeezerAPI/index.html",
-    "static/css/main.c0725802.chunk.css.map": "/rockysfairat/ReactAppDeezerAPI/static/css/main.c0725802.chunk.css.map",
-    "static/js/2.4ea97a8c.chunk.js.LICENSE.txt": "/rockysfairat/ReactAppDeezerAPI/static/js/2.4ea97a8c.chunk.js.LICENSE.txt",
-    "static/media/musicianDrumAndBass.866ee732.jpg": "/rockysfairat/ReactAppDeezerAPI/static/media/musicianDrumAndBass.866ee732.jpg"
+    "main.css": "/ReactAppDeezerAPI/static/css/main.d60645c6.chunk.css",
+    "main.js": "/ReactAppDeezerAPI/static/js/main.7745b097.chunk.js",
+    "main.js.map": "/ReactAppDeezerAPI/static/js/main.7745b097.chunk.js.map",
+    "runtime-main.js": "/ReactAppDeezerAPI/static/js/runtime-main.970f1bef.js",
+    "runtime-main.js.map": "/ReactAppDeezerAPI/static/js/runtime-main.970f1bef.js.map",
+    "static/js/2.54f35678.chunk.js": "/ReactAppDeezerAPI/static/js/2.54f35678.chunk.js",
+    "static/js/2.54f35678.chunk.js.map": "/ReactAppDeezerAPI/static/js/2.54f35678.chunk.js.map",
+    "index.html": "/ReactAppDeezerAPI/index.html",
+    "static/css/main.d60645c6.chunk.css.map": "/ReactAppDeezerAPI/static/css/main.d60645c6.chunk.css.map",
+    "static/js/2.54f35678.chunk.js.LICENSE.txt": "/ReactAppDeezerAPI/static/js/2.54f35678.chunk.js.LICENSE.txt",
+    "static/media/DeezerLogo.9c421b60.png": "/ReactAppDeezerAPI/static/media/DeezerLogo.9c421b60.png",
+    "static/media/dancing_sailor_dude.5d4e121c.gif": "/ReactAppDeezerAPI/static/media/dancing_sailor_dude.5d4e121c.gif",
+    "static/media/musicianChill.6e3dbd5b.jpg": "/ReactAppDeezerAPI/static/media/musicianChill.6e3dbd5b.jpg",
+    "static/media/musicianDeepHouse.5229c534.jpg": "/ReactAppDeezerAPI/static/media/musicianDeepHouse.5229c534.jpg",
+    "static/media/musicianDrumAndBass.866ee732.jpg": "/ReactAppDeezerAPI/static/media/musicianDrumAndBass.866ee732.jpg",
+    "static/media/tumbleweed.494073e0.gif": "/ReactAppDeezerAPI/static/media/tumbleweed.494073e0.gif"
   },
   "entrypoints": [
-    "static/js/runtime-main.f8dd00fe.js",
-    "static/js/2.4ea97a8c.chunk.js",
-    "static/css/main.c0725802.chunk.css",
-    "static/js/main.d208aa21.chunk.js"
+    "static/js/runtime-main.970f1bef.js",
+    "static/js/2.54f35678.chunk.js",
+    "static/css/main.d60645c6.chunk.css",
+    "static/js/main.7745b097.chunk.js"
   ]
 }
