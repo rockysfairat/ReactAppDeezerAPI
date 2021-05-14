@@ -38,8 +38,6 @@ const AlbumWrapper = ({id}) => {
         //     setAlbumList(albums.data)}, 3000);
 
         setAlbumList(albums);
-
-        console.log(albums);
     }
 
     useEffect(() => {
@@ -52,11 +50,6 @@ const AlbumWrapper = ({id}) => {
             <Loader />
         </>
     }
-
-    console.log(albumList); // must return the obj, delete this line later!
-
-    console.log(albumList.next);
-
 
     return <><h2 class='discographyPage_title'>{albumList.data[0]?.artist.name}</h2>
      <div className='albumGrid'>

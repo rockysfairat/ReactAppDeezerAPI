@@ -8,19 +8,21 @@ import ArtistPage from './Pages/ArtistPage/ArtistPage';
 import DiscographyPage from './Pages/DiscographyPage/DiscographyPage';
 import TrackListPage from './Pages/TrackListPage/TrackList';
 
+const baseURL = 'ReactAppDeezerAPI';
+
 const App = () => {
-    return <Router>
+    return <Router basename={'/' + baseURL}>
         <Switch>
-            <Route exact path='/ReactAppDeezerAPI'>
+            <Route exact path='/'>
                 <HomePage />
             </Route>
-            <Route path='/albums/:albumId/'>
+            <Route path={'/albums/:albumId/'}>
                 <TrackListPage />
             </Route>
-            <Route path='/artists/:id/'>
+            <Route path={'/artists/:id/'}>
                 <DiscographyPage />
             </Route>
-            <Route path='/:genre/artists/'>
+            <Route path={'/:genre/artists/'}>
                 <ArtistPage />    
             </Route>
         </Switch>

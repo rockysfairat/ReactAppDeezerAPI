@@ -47,8 +47,6 @@ const TrackListGrid = ({id}) => {
         </>
     }
 
-    console.log(trackList); // must return the obj, delete this line later!
-
     return <div className='tracksWrapper'>
         <h2>{trackList.title} <span>by {trackList.artist.name}</span> </h2>
         <h5>Label: {trackList.label} / Released: {trackList.release_date}</h5>
