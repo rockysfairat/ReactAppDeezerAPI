@@ -8,10 +8,10 @@ import './discographypage.css';
 import Album from '../../Components/Album/Album';
 import Loader from '../../Components/Loader/Loader';
 import Footer from '../../Components/Footer/Footer';
+import NoArtistData from '../../Components/No_Artist_Data/NoArtistData';
 
 export default function DiscographyPage() {
     const {id} = useParams();
-    console.log(id);
     return <div class='PageContainer'>
         <AlbumWrapper id={id}/>
         <Footer />
@@ -21,11 +21,11 @@ export default function DiscographyPage() {
 
 const AlbumWrapper = ({id}) => {
 
-    const url = `https://api.deezer.com/artist/${id}/top?limit=20`;
+    const baseUrl = `https://api.deezer.com/artist/${id}/top?limit=15`;
 
     const [albumList, setAlbumList] = useState([]);
 
-    const getAlbums = async () => {
+    const getAlbums = async (url) => {
 
         const response = await fetch(url);
         
@@ -37,11 +37,13 @@ const AlbumWrapper = ({id}) => {
         // setTimeout( () => {
         //     setAlbumList(albums.data)}, 3000);
 
-        setAlbumList(albums.data);
+        setAlbumList(albums);
+
+        console.log(albums);
     }
 
     useEffect(() => {
-        getAlbums();
+        getAlbums(baseUrl);
         return () => {}
     }, []);
 
@@ -53,9 +55,12 @@ const AlbumWrapper = ({id}) => {
 
     console.log(albumList); // must return the obj, delete this line later!
 
-    return <><h2>{albumList[0]?.artist.name}</h2>
+    console.log(albumList.next);
+
+
+    return <><h2 class='discographyPage_title'>{albumList.data[0]?.artist.name}</h2>
      <div className='albumGrid'>
-        {albumList.map( (item) => {
+        {albumList.data.map( (item) => {
             const {id, cover_medium, title} = item.album;
             return ( <Link to={'/albums/' + id}>
                 <Album 
@@ -66,6 +71,26 @@ const AlbumWrapper = ({id}) => {
             </Link>
             )
         })}
+    </div>
+
+    <div class='prevAndNext_buttons'>
+        {!!albumList.prev && 
+            <button onClick={ () => getAlbums(albumList.prev)}>
+                PREV
+            </button>
+        }
+
+        {!!albumList.next &&
+            <button onClick={ () => getAlbums(albumList.next)}>
+                NEXT
+            </button>
+        }
+    </div>
+
+    <div>
+        {albumList.data == 0 &&
+            <NoArtistData />
+        }
     </div>
     </>
 }

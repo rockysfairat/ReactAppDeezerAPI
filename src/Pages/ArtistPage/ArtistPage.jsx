@@ -44,8 +44,6 @@ const ArtistGrid = ({genre}) => {
         return () => {}
     }, []);
 
-    console.log(artistList); // returns the obj
-
     if (artistList.length === 0) {
         return <>
         <Loader />
@@ -63,8 +61,6 @@ const ArtistGrid = ({genre}) => {
                     name={name} />
                 )
             })}
-
-        
     </div>
 
     <div class='prevAndNext_buttons'>
@@ -81,5 +77,4 @@ const ArtistGrid = ({genre}) => {
         }
     </div>
     </div>
-    
 }
