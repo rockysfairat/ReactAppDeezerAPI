@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/ReactAppDeezerAPI/static/css/main.d60645c6.chunk.css",
-    "main.js": "/ReactAppDeezerAPI/static/js/main.ddeb68cd.chunk.js",
-    "main.js.map": "/ReactAppDeezerAPI/static/js/main.ddeb68cd.chunk.js.map",
+    "main.js": "/ReactAppDeezerAPI/static/js/main.fc8ff461.chunk.js",
+    "main.js.map": "/ReactAppDeezerAPI/static/js/main.fc8ff461.chunk.js.map",
     "runtime-main.js": "/ReactAppDeezerAPI/static/js/runtime-main.970f1bef.js",
     "runtime-main.js.map": "/ReactAppDeezerAPI/static/js/runtime-main.970f1bef.js.map",
     "static/js/2.ba167431.chunk.js": "/ReactAppDeezerAPI/static/js/2.ba167431.chunk.js",
@@ -21,6 +21,6 @@
     "static/js/runtime-main.970f1bef.js",
     "static/js/2.ba167431.chunk.js",
     "static/css/main.d60645c6.chunk.css",
-    "static/js/main.ddeb68cd.chunk.js"
+    "static/js/main.fc8ff461.chunk.js"
   ]
 }
