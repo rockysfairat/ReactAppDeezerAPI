@@ -1,26 +1,25 @@
 article {
-    /*border: solid 3px red;*/
-    width: 17vw;
-    height: 20vw;
+    align-items: center;
     display: flex;
     flex-direction: column;
+    height: 20vw;
     justify-content: space-between;
-    align-items: center;
     margin: 3vw 0 0 0;
+    width: 17vw;
 }
 
 h4 {
+    color: #fff;
     display: flex;
     justify-content: center;
     margin: 0;
-    width: 100%;
-    color: #fff;
     text-decoration: none;
+    width: 100%;
 }
 
 img {
-    width: 17vw;
     border-radius: 10%;
+    width: 17vw;
 }
 
 a {

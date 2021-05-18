@@ -1,20 +1,19 @@
 .artistContainer {
-    height: 16vw;
-    width: 15vw;
-    /* border: 3px red solid; */
-    display: flex;
-    justify-content: space-between;
     align-items: center;
+    display: flex;
     flex-direction: column;
+    height: 16vw;
+    justify-content: space-between;
+    width: 15vw;
 }
 
 .artistPhoto {
     align-items: center;
     border-color: #007bff;
     border-radius: 50% 50% 50% 50%;
-    flex-wrap: wrap;
     border-style: solid;
     display: flex;
+    flex-wrap: wrap;
     height: 11vw;
     justify-content: center;
     overflow: hidden;

@@ -1,17 +1,16 @@
 ul {
     display: flex;
-    width: 100%;
-    /* border: green 2px dashed; */
-    margin: 0.2vw 0 0.2vw 0;
     list-style-type: none;
+    margin: 0.2vw 0 0.2vw 0;
     padding-left: 1vw;
+    width: 100%;
 }
 
 li {
-    font-size: 20px;
+    align-items: end;
     border-bottom: 1px gray dashed;
     display: flex;
-    align-items: end;
+    font-size: 20px;
 }
 
 .trackTitle {

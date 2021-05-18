@@ -1,12 +1,12 @@
 .PageContainer {
-    width: 100%;
-    min-height: 100vh;
+    align-items: center;
     background-color: #1E1F1C;
     color: #fff;
     display: flex;
     flex-direction: column;
-    align-items: center;
     margin: 3vw 0 3vw 0;
+    min-height: 100vh;
+    width: 100%;
 } 
 
 h1 {
@@ -49,9 +49,9 @@ h2 {
 }
 
 .genre a a {
+    border: #cc727a solid 3px;
     margin-left: 0;
     margin-top: 0;
-    border: #cc727a solid 3px;
 }
 
 .genre h3 {
