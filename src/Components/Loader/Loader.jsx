@@ -1,4 +1,7 @@
+import PropTypes from "prop-types";
+
 import "./loader.css";
+
 import dancing_dude from "../../images/dancing_sailor_dude.gif";
 
 export default function Loader() {
@@ -9,3 +12,7 @@ export default function Loader() {
     </div>
   );
 }
+
+Loader.propTypes = {
+  dancing_dude: PropTypes.string,
+};

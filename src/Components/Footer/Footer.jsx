@@ -1,4 +1,7 @@
+import PropTypes from "prop-types";
+
 import "./footer.css";
+
 import DeezerLogo from "../../images/DeezerLogo.png";
 
 export default function Footer() {
@@ -9,3 +12,7 @@ export default function Footer() {
     </footer>
   );
 }
+
+Footer.propTypes = {
+  DeezerLogo: PropTypes.string,
+};

@@ -1,4 +1,7 @@
+import PropTypes from "prop-types";
+
 import "./no_artist_data.css";
+
 import tumbleweed from "../../images/tumbleweed.gif";
 
 export default function Loader() {
@@ -9,3 +12,7 @@ export default function Loader() {
     </div>
   );
 }
+
+Loader.propTypes = {
+  tumbleweed: PropTypes.string,
+};
