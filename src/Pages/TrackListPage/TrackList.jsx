@@ -18,7 +18,7 @@ export default function TrackListPage() {
 }
 
 const TrackListGrid = ({ id }) => {
-  const url = `https://api.deezer.com/album/${id}`;
+  const url = `/album/${id}`;
 
   const [trackList, setTrackList] = useState([]);
 
@@ -29,10 +29,6 @@ const TrackListGrid = ({ id }) => {
     if (tracks === 0) {
       return "The JSON file is empty!";
     }
-
-    // setTimeout(() => {
-    //   setTrackList(tracks);
-    // }, 3000);
 
     setTrackList(tracks);
   };

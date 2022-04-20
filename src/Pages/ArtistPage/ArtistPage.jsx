@@ -32,8 +32,6 @@ const ArtistGrid = ({ genre }) => {
     if (artists === 0) {
       return "The JSON file is empty!";
     }
-    // setTimeout( () => {
-    //     setArtistList(artists)}, 3000);
 
     setArtistList(artists);
   };
