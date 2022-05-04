@@ -1,7 +1,7 @@
 {
   "homepage": "http://rockysfairat.github.io/ReactAppDeezerAPI",
-  "name": "my-app-deezer-api",
-  "version": "0.1.0",
+  "name": "proxy",
+  "version": "1.0.0",
   "private": true,
   "proxy": "https://licenseapi.herokuapp.com",
   "dependencies": {

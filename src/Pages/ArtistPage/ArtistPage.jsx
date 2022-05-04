@@ -8,20 +8,20 @@ import Footer from "../../Components/Footer/Footer";
 import Loader from "../../Components/Loader/Loader";
 
 export default function ArtistPage() {
-  const { genre } = useParams();
+  const { id } = useParams();
   return (
     <div className="PageContainer">
-      <h2 className="artistPage_title">Genre: {genre} </h2>
+      <h2 className="artistPage_title">Genre: {id} </h2>
       <div>
-        <ArtistGrid genre={genre} />
+        <ArtistGrid genre={id} />
       </div>
       <Footer />
     </div>
   );
 }
 
-const ArtistGrid = ({ genre }) => {
-  const baseUrl = `https://api.deezer.com/search?q=${genre}`;
+const ArtistGrid = ({ id }) => {
+  const baseUrl = `/album/${id}`;
 
   const [artistList, setArtistList] = useState([]);
 
